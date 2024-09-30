@@ -1,0 +1,133 @@
+.autform {
+    width: 90%;
+    max-width: 500px;
+    margin: 5px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 175, 0, 0.25);
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+.autform:hover,
+.autform:focus-within {
+    width: 100%;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 0px;
+}
+
+.autlabel {
+    margin: 5px;
+    white-space: nowrap;
+}
+
+.autinput {
+    width: 80%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.autbutton {
+    width: 125px;
+    margin: 10px;
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.editform,
+.edit,
+.viewform,
+.view {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.editinvi,
+.viewinvi {
+    width: 90%;
+    max-width: 500px;
+    margin: 5px 0px;
+    padding: 5px;
+    background-color: rgba(0, 175, 0, 0.25);
+    border-radius: 5px;
+}
+
+.editinput {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.editdelete {
+    text-align: center;
+}
+
+.editbutton01,
+.editbutton02 {
+    width: 125px;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.editbutton01 {
+    background-color: transparent;
+}
+
+.editbutton02 {
+    background-color: rgba(0, 175, 0, 0.25);
+}
+
+.viewdata {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.viewconfirm {
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(0, 175, 0);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.viewbutton {
+    width: 125px;
+    margin: 5px;
+    padding: 5px;
+    background-color: rgba(0, 175, 0, 0.25);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.autbutton:hover,
+.editbutton02:hover,
+.viewbutton:hover {
+    border: 1px solid rgb(0, 0, 255);
+}
+
+.editbutton01:hover {
+    border: 1px solid rgb(255, 0, 0);
+}

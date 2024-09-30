@@ -1,0 +1,71 @@
+.player {
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+button {
+    width: 50px;
+    height: 37.5px;
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 175, 0, 0.25);
+    font-size: 14px;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:hover {
+        border: 1px solid rgb(0, 0, 255);
+    }
+}
+
+.slider {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.progress-container {
+    width: 100%;
+}
+
+.progress-container input[type="range"] {
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    background: rgba(0, 175, 0, 0.25);
+    border-radius: 5px;
+}
+
+.progress-container input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: rgba(0, 175, 0);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume-container {
+    width: 100%;
+}
+
+.volume-container input[type="range"] {
+    width: 50%;
+    appearance: none;
+    height: 5px;
+    background: rgba(0, 175, 0, 0.25);
+    border-radius: 5px;
+}
+
+.volume-container input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: rgba(0, 175, 0);
+    border-radius: 50%;
+    cursor: pointer;
+}

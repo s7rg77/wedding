@@ -1,0 +1,95 @@
+<ng-container *ngIf="!loggedIn">
+  <form class="autform" [formGroup]="signupForm" (ngSubmit)="signup()">
+    <label class="autlabel" for="signupEmail">Correo electrónico</label>
+    <input class="autinput" id="signupEmail" formControlName="user_mail" type="email" />
+    <label class="autlabel" for="signupPassword">Contraseña</label>
+    <input class="autinput" id="signupPassword" formControlName="user_pass" type="password" />
+    <button class="autbutton" type="submit">Registrarse</button>
+  </form>
+  <form class="autform" [formGroup]="signinForm" (ngSubmit)="signin()">
+    <label class="autlabel" for="signinEmail">Correo electrónico</label>
+    <input class="autinput" id="signinEmail" formControlName="user_mail" type="email" />
+    <label class="autlabel" for="signinPassword">Contraseña</label>
+    <input class="autinput" id="signinPassword" formControlName="user_pass" type="password" />
+    <button class="autbutton" type="submit">Iniciar sesión</button>
+  </form>
+</ng-container>
+<ng-container *ngIf="loggedIn">
+  <ng-container *ngIf="!viewingData">
+    <form class="editform" [formGroup]="mainForm" (ngSubmit)="confirm()">
+      <div class="edit" formArrayName="users">
+        <ng-container *ngFor="let user of users.controls; let i = index" [formGroupName]="i">
+          <div class="editinvi">
+            <div class="editinput">
+              <label for="user_name_{{i}}">Nombre:</label>
+              <input id="user_name_{{i}}" formControlName="user_name" />
+            </div>
+            <div class="editinput">
+              <label for="user_last_{{i}}">Apellidos:</label>
+              <input id="user_last_{{i}}" formControlName="user_last" />
+            </div>
+            <div class="editinput">
+              <label>Edad:</label>
+              <div>
+                <label>
+                  <input type="radio" formControlName="user_age" [value]="true" /> Adulto
+                </label>
+                <label>
+                  <input type="radio" formControlName="user_age" [value]="false" /> Niño
+                </label>
+              </div>
+            </div>
+            <div class="editinput">
+              <label>Necesita autobús:</label>
+              <div>
+                <label>
+                  <input type="radio" formControlName="user_bus" [value]="true" /> Sí
+                </label>
+                <label>
+                  <input type="radio" formControlName="user_bus" [value]="false" /> No
+                </label>
+              </div>
+            </div>
+            <div class="editinput">
+              <label for="user_data_{{i}}">Alergias:</label>
+              <input id="user_data_{{i}}" formControlName="user_data" />
+            </div>
+            <div class="editdelete">
+              <button class="editbutton01" type="button" (click)="removeUser(i)" *ngIf="users.length > 0">Eliminar
+                invitado</button>
+            </div>
+          </div>
+        </ng-container>
+        <button class="editbutton02" type="button" (click)="addUser()" *ngIf="users.length < 4">Añadir invitado</button>
+        <div>
+          <button class="editbutton02" type="submit" *ngIf="users.length > 0 && !editing">Confirmar</button>
+          <button class="editbutton02" type="submit" *ngIf="users.length > 0 && editing">Guardar</button>
+          <button class="editbutton02" type="button" (click)="signout()">Cerrar sesión</button>
+        </div>
+      </div>
+    </form>
+  </ng-container>
+  <ng-container *ngIf="viewingData">
+    <form class="viewform" [formGroup]="mainForm">
+      <div class="view" formArrayName="users">
+        <ng-container *ngFor="let user of users.controls; let i = index" [formGroupName]="i">
+          <div class="viewinvi">
+            <div class="viewdata">
+              {{ user.get('user_name')?.value }} {{ user.get('user_last')?.value }}
+              <div>
+                <div class="viewconfirm">CONFIRMADO</div>
+              </div>
+            </div>
+            {{ user.get('user_age')?.value ? 'Adulto' : 'Niño' }}<br>
+            Autobús: {{ user.get('user_bus')?.value ? 'Sí' : 'No' }}<br>
+            Alergias e intolerancias: {{ user.get('user_data')?.value }}
+          </div>
+        </ng-container>
+      </div>
+      <div class="viewbuttons">
+        <button class="viewbutton" type="button" (click)="edit()">Editar</button>
+        <button class="viewbutton" type="button" (click)="signout()">Cerrar sesión</button>
+      </div>
+    </form>
+  </ng-container>
+</ng-container>

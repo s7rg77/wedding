@@ -1,0 +1,24 @@
+<audio #audio src="assets/nachocano.mp3"></audio>
+<div class="player">
+    <button (click)="togglePlayPause()">
+        <svg *ngIf="!isPlaying" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="-1 -1 25 25"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5,3 19,12 5,21"></polygon>
+        </svg>
+
+        <svg *ngIf="isPlaying" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 -1 25 25" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+        </svg>
+    </button>
+
+    <div class="slider">
+        <div class="progress-container">
+            <input type="range" min="0" max="100" [value]="(currentTime / duration) * 100" (input)="seek($event)" />
+        </div>
+        <div class="volume-container">
+            <input type="range" min="0" max="1" step="0.01" [value]="volume" (input)="updateVolume($event)" />
+        </div>
+    </div>
+</div>
