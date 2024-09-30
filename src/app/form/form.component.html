@@ -82,7 +82,7 @@
             </div>
             {{ user.get('user_age')?.value ? 'Adulto' : 'Niño' }}<br>
             Autobús: {{ user.get('user_bus')?.value ? 'Sí' : 'No' }}<br>
-            Alergias e intolerancias: {{ user.get('user_data')?.value }}
+            Alergias: {{ user.get('user_data')?.value }}
           </div>
         </ng-container>
       </div>
@@ -91,5 +91,26 @@
         <button class="viewbutton" type="button" (click)="signout()">Cerrar sesión</button>
       </div>
     </form>
+  </ng-container>
+  <ng-container *ngIf="loggedIn && user_mail === 'sxrgxx@gmail.com'">
+    <h3>Número de invitados: {{ allUsers.length }}</h3>
+    <div class="full" *ngIf="allUsers.length > 0">
+      <ng-container *ngFor="let user of allUsers; let i = index">
+        <div class="fullinvi">
+          <div class="fulldata">
+            <div>
+              {{ user.user_name }} {{ user.user_last }}
+            </div>
+            <div>
+              {{ user.user_date }}
+            </div>
+          </div>
+          {{ user.user_age ? 'Adulto' : 'Niño' }}<br>
+          Autobús: {{ user.user_bus ? 'Sí' : 'No' }}<br>
+          Alergias: {{ user.user_data }}
+
+        </div>
+      </ng-container>
+    </div>
   </ng-container>
 </ng-container>

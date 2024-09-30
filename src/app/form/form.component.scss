@@ -46,7 +46,8 @@
 .editform,
 .edit,
 .viewform,
-.view {
+.view,
+.full {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -54,13 +55,28 @@
 }
 
 .editinvi,
-.viewinvi {
+.viewinvi,
+.fullinvi {
     width: 90%;
     max-width: 500px;
     margin: 5px 0px;
     padding: 5px;
-    background-color: rgba(0, 175, 0, 0.25);
     border-radius: 5px;
+}
+
+.full {
+    max-height: 365px;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+.editinvi,
+.fullinvi {
+    background-color: rgba(0, 0, 175, 0.25);
+}
+
+.viewinvi {
+    background-color: rgba(0, 175, 0, 0.25);
 }
 
 .editinput {
@@ -94,7 +110,8 @@
     background-color: rgba(0, 175, 0, 0.25);
 }
 
-.viewdata {
+.viewdata,
+.fulldata {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
@@ -104,9 +121,8 @@
     padding: 5px;
     border-radius: 5px;
     color: white;
-    background-color: rgba(0, 175, 0);
+    background-color: rgb(0, 175, 0);
     font-size: 12px;
-    font-weight: bold;
 }
 
 .viewbutton {
