@@ -2,13 +2,13 @@ import { Component, HostListener, ElementRef } from '@angular/core';
 
 @Component({
 
-  selector: 'app-itinerary',
-  templateUrl: './itinerary.component.html',
-  styleUrl: './itinerary.component.scss'
+  selector: 'app-services',
+  templateUrl: './services.component.html',
+  styleUrl: './services.component.scss'
 
 })
 
-export class ItineraryComponent {
+export class ServicesComponent {
 
   elementsState: { transform: string }[] = []; // Eliminamos opacity
 

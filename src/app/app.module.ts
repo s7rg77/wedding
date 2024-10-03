@@ -16,6 +16,7 @@ import { MapComponent } from './map/map.component';
 import { FormComponent } from './form/form.component';
 import { ItineraryComponent } from './itinerary/itinerary.component';
 import { BookComponent } from './book/book.component';
+import { ServicesComponent } from './services/services.component';
 
 const firebaseConfig = {
   apiKey: "...",
@@ -33,7 +34,8 @@ const firebaseConfig = {
     MapComponent,
     FormComponent,
     ItineraryComponent,
-    BookComponent
+    BookComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,

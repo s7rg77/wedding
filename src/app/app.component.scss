@@ -95,8 +95,8 @@ header {
     height: 100vh;
     width: auto;
     z-index: -5;
-    mask-image: radial-gradient(ellipse 75% 75%, rgba(0, 0, 0, 0.75) 25%, rgba(0, 0, 0, 0) 100%);
-    -webkit-mask-image: radial-gradient(ellipse 75% 75%, rgba(0, 0, 0, 0.75) 25%, rgba(0, 0, 0, 0) 100%);
+    mask-image: radial-gradient(ellipse 50% 100%, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: radial-gradient(ellipse 50% 100%, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0) 100%);
 }
 
 .calendarpng {
@@ -138,29 +138,7 @@ button {
     padding: 5px;
     text-align: end;
     background: linear-gradient(to top left, rgb(175, 255, 175, 0.5), rgba(175, 255, 175, 0));
-    font-size: 25px;
-}
-
-#waterfall {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#waterfall p {
-    margin-top: 250px;
-    align-self: center;
-    position: absolute;
-    font-size: 25px;
-}
-
-#elena {
-    width: 100%;
-    max-width: 500px;
-    z-index: -5;
-    mask-image: radial-gradient(ellipse 75% 50%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 100%);
-    -webkit-mask-image: radial-gradient(ellipse 75% 50%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 100%);
+    font-size: 20px;
 }
 
 #place {
@@ -184,26 +162,32 @@ button {
     margin: 0px;
 }
 
-.slider01 {
-    width: 90%;
-    height: auto;
-}
-
-app-form, app-audioplayer {
+#waterfall {
     width: 100%;
-    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-app-itinerary {
-    width: 90%;
-    text-align: center;
+#waterfall p {
+    margin-top: 250px;
+    align-self: center;
+    position: absolute;
+    font-family: 'wedding01font';
+    font-size: 100px;
 }
 
-app-book {
-    width: 90%;
+#elena {
+    width: 100%;
+    max-width: 500px;
+    z-index: -5;
+    mask-image: radial-gradient(ellipse 50% 50%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: radial-gradient(ellipse 50% 50%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+app-audioplayer, app-itinerary, app-services, app-form, app-book {
+    width: 100%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;

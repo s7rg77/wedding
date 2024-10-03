@@ -5,8 +5,11 @@
 }
 
 .book {
-    width: 100%;
+    width: 90%;
     max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     aspect-ratio: 1.5 / 1;
     perspective: 750px;
     user-select: none;
@@ -98,7 +101,7 @@ input:checked {
     height: 100%;
     top: 0;
     border-radius: 0 5px 5px 0;
-    background-color: rgba(0, 125, 0);
+    background-color: rgb(75, 125, 75);
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5), -5px 5px 10px rgba(0, 0, 0, 0.5);
 
 
@@ -107,7 +110,7 @@ input:checked {
         font-family: 'wedding01font';
         font-size: 75px;
         font-weight: 100;
-        color: rgba(255, 255, 255);
+        color: rgb(255, 255, 255);
         line-height: 50px;
     }
 

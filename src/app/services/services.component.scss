@@ -1,0 +1,64 @@
+#services {
+    width: 90%;
+    text-align: center;
+}
+
+.title {
+    font-family: 'stretchfont';
+    font-size: 36px;
+    color: rgb(0, 125, 255);
+}
+
+#goback {
+    display: flex;
+    flex-direction: column;
+}
+
+#go, #back {
+    font-family: 'wedding02font';
+    font-size: 72px;
+    color: rgb(255, 0, 125);
+}
+
+#hour {
+    font-family: 'optimusfont';
+    font-size: 24px;
+    color:  rgb(0, 0, 0);
+}
+
+button {
+    width: 125px;
+    margin: 25px;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 175, 0, 0.25);
+    font-size: 14px;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:hover {
+        border: 1px solid rgb(0, 0, 255);
+    }
+}
+
+.zoom {
+    transition: transform 0.1s ease;
+    transform-origin: center;
+}
+
+@font-face {
+    font-family: 'wedding02font';
+    src: url('/assets/wedding02.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'stretchfont';
+    src: url('/assets/stretch.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'optimusfont';
+    src: url('/assets/optimus.ttf') format('truetype');
+}

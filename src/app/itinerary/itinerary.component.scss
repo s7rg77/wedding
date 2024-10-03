@@ -1,3 +1,8 @@
+#itinerary {
+    width: 90%;
+    text-align: center;
+}
+
 #we {
     font-family: 'stretchfont';
     font-size: 36px;
@@ -79,10 +84,9 @@
     color: rgba(255, 125, 125);
 }
 
-#day, #rings, #cocktail, #chiken {
-    margin-bottom: 25px;
-    padding-bottom: 25px;
-    border-bottom: 5px dotted rgba(255, 125, 125);
+.zoom {
+    transition: transform 0.1s ease;
+    transform-origin: center;
 }
 
 @font-face {
