@@ -1,0 +1,20 @@
+<div id="load" *ngIf="isLoading">Cargando TOP10...</div>
+
+<div id="top-container" *ngIf="!isLoading">
+
+    <h2>Top 10</h2>
+
+    <ul>
+        <li *ngFor="let top of tops; let i = index" [ngClass]="{'font': i < 3}">
+            <div id="name">
+                <span>{{ top.game_name }}</span><span>{{ top.game_dist }} m.</span>
+            </div>
+            <div id="data">
+                <span>{{ top.game_power }}% - {{ top.game_angle }}°</span><span>{{ top.game_date }}</span>
+            </div>
+        </li>
+    </ul>
+
+    <button *ngIf="showExitButton" class="fade-in" [routerLink]="['/game']">EXIT</button>
+
+</div>

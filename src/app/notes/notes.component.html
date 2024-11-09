@@ -1,0 +1,33 @@
+<div id="load" *ngIf="isLoading">Cargando libro</div>
+
+<div id="notes-container" *ngIf="!isLoading">
+
+    <h2>Libro de firmas virtual</h2>
+
+    <div id="notes">
+        <div *ngFor="let note of notes" class="note">
+            <div class="header">
+                {{ note.notesDate | date: 'HH:mm dd/MM' }}
+            </div>
+            <div class="body">
+                <img [src]="note.notesImage" alt="image" class="image" *ngIf="note.notesImage" />
+                <pre>{{ note.notesText }}</pre>
+            </div>
+        </div>
+    </div>
+
+    <form [formGroup]="notesForm" (ngSubmit)="addNote()">
+
+        <label for="notesText">Texto</label>
+        <textarea id="notesText" formControlName="notesText"></textarea>
+
+        <input type="file" id="fileInput" (change)="onFileSelected($event)" #fileInput style="display: none;"
+            accept="image/*" />
+        <button type="button" (click)="fileInput.click()">Elegir imagen</button>
+
+        <button type="submit" [disabled]="notesForm.invalid">Guardar</button>
+    </form>
+
+    <button (click)="exit()">Salir</button>
+
+</div>

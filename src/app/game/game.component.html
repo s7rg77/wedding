@@ -1,0 +1,71 @@
+<h2>Lanza el ramo</h2>
+
+<div id="game-container">
+
+  <div id="params">
+
+    <div class="progress-bar">
+      <div class="fill" [style.width.%]="fillLevel"></div>
+    </div>
+
+    <div class="dial-container">
+      <div class="fixed-dial"></div>
+      <div class="dial" [style.transform]="'rotate(' + angle + 'deg)'"></div>
+    </div>
+
+  </div>
+
+  <div id="screen">
+
+    <div id="bride-container">
+
+      <div id="sega-container">
+        <app-sega></app-sega>
+      </div>
+
+      <img src="assets/bride07.png" alt="bride" class="bride"
+        [ngStyle]="{'transform': 'translateX(-' + bridePosition + 'px)'}">
+      <img src="assets/bouquet07.png" alt="flowers" class="flowers" />
+
+      <div *ngIf="showData" id="data">
+
+        <p>Potencia: {{ selectedPower | number:'1.2-2' }}%</p>
+        <p>Ángulo: {{ selectedAngle | number:'1.2-2' }}°</p>
+        <p>Viento: {{ windSpeed | number:'1.2-2' }} Km/h
+          <svg *ngIf="windDirection" class="arrow" width="10" height="10" viewBox="0 0 20 20">
+            <polygon points="20,10 5,0 5,20" fill="rgb(0, 150, 0)" />
+          </svg>
+          <svg *ngIf="!windDirection" class="arrow" width="10" height="10" viewBox="0 0 20 20">
+            <polygon points="0,10 15,0 15,20" fill="rgb(255, 0, 0" />
+          </svg>
+        </p>
+        
+        <p id="distance">Distancia: {{ distanceInMeters | number:'1.2-2' }} metros</p>
+        <p>{{ message }}</p>
+
+        <div *ngIf="newRecord">
+          <input type="text" id="nameInput" placeholder="introduce tu NOMBRE" />
+          <button id="save" (click)="saveRecord()">SAVE</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="ground-container">
+
+      <div class="ground" [ngStyle]="{'transform': 'translateX(-' + groundPosition + 'px)'}">
+        <div *ngFor="let meter of meters" class="meter">{{ meter }}</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <button class="button" *ngIf="buttonVisible" (click)="handleButtonClick()">{{ buttonLabel }}</button>
+  <button class="button" *ngIf="buttonsVisible" (click)="view()">TOP 10</button>
+  <button class="button" *ngIf="buttonsVisible" (click)="exit()">EXIT</button>
+
+  <img id="married" *ngIf="showMarriedImage" src="/assets/married.gif" alt="married">
+
+</div>

@@ -1,0 +1,236 @@
+header,
+main,
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    height: 100vh;
+}
+
+.names {
+    height: 50%;
+    margin-top: 20vh;
+    max-width: 200px;
+}
+
+.png02,
+.png03,
+.png04,
+.png05,
+.png06,
+.png07,
+.png08,
+.png09 {
+    position: fixed;
+    height: auto;
+}
+
+.png02,
+.png04,
+.png06,
+.png08 {
+    left: 0px;
+}
+
+.png03,
+.png05,
+.png07,
+.png09 {
+    right: 0px;
+}
+
+.png02 {
+    width: 80vw;
+    max-width: 400px;
+    z-index: -3;
+}
+
+.png03,
+.png04 {
+    width: 30vw;
+    max-width: 150px;
+    z-index: -2;
+}
+
+.png05 {
+    width: 25vw;
+    max-width: 125px;
+    z-index: -1;
+}
+
+.png06,
+.png07,
+.png09 {
+    width: 15vw;
+    max-width: 75px;
+    z-index: -4;
+}
+
+.png08 {
+    width: 30vw;
+    max-width: 150px;
+    z-index: -3;
+}
+
+.png04,
+.png05 {
+    top: 35vh;
+}
+
+.png06,
+.png07 {
+    top: 25vh;
+}
+
+.png08 {
+    top: 75vh;
+}
+
+.png09 {
+    top: 50vh;
+}
+
+#elenasergio {
+    position: fixed;
+    height: 100vh;
+    width: auto;
+    z-index: -6;
+    mask-image: radial-gradient(ellipse 50% 100%, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: radial-gradient(ellipse 50% 100%, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.calendarpng {
+    width: 90%;
+    margin-bottom: 25px;
+}
+
+#google {
+    margin-top: 25px;
+}
+
+h2 {
+    width: 100%;
+    padding-top: 25px;
+    background: linear-gradient(to top right, rgba(125, 75, 175, 0.5), rgba(125, 75, 175, 0));
+    font-family: 'wedding01font';
+    font-size: 60px;
+    font-weight: 100;
+    text-align: center;
+}
+
+button {
+    width: 50%;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 175, 0, 0.25);
+    font-size: 16px;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:hover {
+        border: 1px solid rgb(0, 0, 255);
+    }
+}
+
+#chrono {
+    width: 90%;
+    max-width: 500px;
+    padding: 5px;
+    text-align: center;
+    background: linear-gradient(to top right, rgba(75, 125, 175, 0.5), rgba(125, 75, 175, 0));
+    font-size: 20px;
+}
+
+#clock {
+    margin-top: 5px;
+}
+
+#place {
+    width: 90%;
+    text-align: center;
+}
+
+#castle {
+    margin-top: 0px;
+    font-family: 'medievalfont';
+    font-size: 48px;
+}
+
+#location {
+    font-size: 20px;
+}
+
+.map {
+    width: 90%;
+    max-width: 500px;
+    aspect-ratio: 1 / 0.75;
+    margin: 0px;
+}
+
+.p {
+    width: 90%;
+    max-width: 250px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+#date {
+    margin-top: 250px;
+    align-self: center;
+    position: absolute;
+    font-family: 'wedding01font';
+    font-size: 75px;
+}
+
+#elena {
+    width: 100%;
+    max-width: 500px;
+    z-index: -5;
+    mask-image: radial-gradient(ellipse 50% 50%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: radial-gradient(ellipse 50% 50%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+#s7rg77 {
+    font-size: 24px;
+}
+
+app-audioplayer,
+app-itinerary,
+app-services,
+app-form,
+app-book,
+#calendar,
+#notes-container,
+#game-container,
+#waterfall {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+app-leaves {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -5;
+    pointer-events: none;
+}
+
+@font-face {
+    font-family: 'wedding01font';
+    src: url('/assets/wedding01.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'medievalfont';
+    src: url('/assets/medieval.ttf') format('truetype');
+}

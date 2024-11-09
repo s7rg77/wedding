@@ -17,6 +17,12 @@ import { FormComponent } from './form/form.component';
 import { ItineraryComponent } from './itinerary/itinerary.component';
 import { BookComponent } from './book/book.component';
 import { ServicesComponent } from './services/services.component';
+import { GameComponent } from './game/game.component';
+import { MainComponent } from './main/main.component';
+import { TopComponent } from './top/top.component';
+import { SegaComponent } from './sega/sega.component';
+import { NotesComponent } from './notes/notes.component';
+import { LeavesComponent } from './leaves/leaves.component';
 
 const firebaseConfig = {
   apiKey: "...",
@@ -35,7 +41,13 @@ const firebaseConfig = {
     FormComponent,
     ItineraryComponent,
     BookComponent,
-    ServicesComponent
+    ServicesComponent,
+    GameComponent,
+    MainComponent,
+    TopComponent,
+    SegaComponent,
+    NotesComponent,
+    LeavesComponent
   ],
   imports: [
     BrowserModule,

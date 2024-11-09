@@ -1,0 +1,17 @@
+<div class="sky00">
+    <div class="sky01" [ngStyle]="{'transform': 'translateX(-' + groundPosition * 0.15 + 'px)'}">
+        <img *ngFor="let img of sky01" [src]="img" alt="transparentsky001">
+    </div>
+    <div class="sky02" [ngStyle]="{'transform': 'translateX(-' + groundPosition * 0.10 + 'px)'}">
+        <img *ngFor="let img of sky02" [src]="img" alt="transparentsky002">
+    </div>
+</div>
+
+<div class="ground00">
+    <div class="ground01" [ngStyle]="{'transform': 'translateX(-' + groundPosition * 0.20 + 'px)'}">
+        <img *ngFor="let img of ground01" [src]="img" alt="transparentground01">
+    </div>
+    <div class="ground02" [ngStyle]="{'transform': 'translateX(-' + groundPosition * 0.25 + 'px)'}">
+        <img *ngFor="let img of ground02" [src]="img" alt="ground02">
+    </div>
+</div>

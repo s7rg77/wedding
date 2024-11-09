@@ -1,0 +1,229 @@
+h2, #game-container, #sega-container, #bride-container, .ground-container {
+  width: 100%;
+}
+
+.dial, .dial::before, .fixed-dial, .bride, .flowers, .ground-container::after, .ground, #data {
+  position: absolute;
+}
+
+h2 {
+  padding-top: 25px;
+  margin-top: 0px;
+  background: linear-gradient(to top right, rgba(125, 75, 175, 0.5), rgba(125, 75, 175, 0));
+  font-family: 'wedding01font';
+  font-size: 60px;
+  font-weight: 100;
+  text-align: center;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#params {
+  width: 90%;
+  max-width: 500px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button,
+#save {
+  width: 75%;
+  max-width: 500px;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  font-size: 24px;
+  cursor: pointer;
+  transition: border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.button {
+  margin-bottom: 25px;
+  background-color: rgba(0, 175, 0, 0.25);
+}
+
+#save {
+  margin: 10px 0px;
+  background-color: rgba(0, 175, 0, 0.5);
+}
+
+button:hover,
+#save:hover {
+  border: 1px solid rgb(0, 0, 255);
+}
+
+.progress-bar {
+  width: 45%;
+  height: 20px;
+  border-right: 2px solid rgb(255, 0, 0);
+}
+
+.fill {
+  height: 100%;
+  background-color: rgb(00, 150, 00);
+  transition: width 0.05s;
+}
+
+.dial-container {
+  width: 45%;
+  position: relative;
+}
+
+.dial {
+  width: 45%;
+  height: 2px;
+  bottom: 0px;
+  background-color: rgb(0, 150, 0);
+  transform-origin: left;
+  transition: transform 0.05s;
+}
+
+.dial::before {
+  content: '';
+  right: -10px;
+  top: -4px;
+  border-left: 10px solid rgb(0, 150, 0);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+.fixed-dial {
+  width: 45%;
+  height: 2px;
+  bottom: 0px;
+  background-color: rgb(255, 0, 0);
+  transform-origin: left;
+  transform: rotate(315deg);
+}
+
+#screen {
+  width: 90%;
+  max-width: 500px;
+  margin-bottom: 25px;
+  border: 2px solid rgb(255, 0, 255);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#bride-container {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(to top, rgb(0, 150, 0) 5%, rgb(0, 255, 255) 35%, rgb(0, 0, 100) 65%, rgb(0, 0, 255) 95%);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.bride {
+  left: 50%;
+  bottom: 5px;
+  transform: translateX();
+  image-rendering: pixelated;
+  transition: transform 2.5s ease-out;
+}
+
+.flowers {
+  left: calc(50% - 35px);
+  bottom: 150px;
+  image-rendering: pixelated;
+  transition: bottom 1.25s ease;
+}
+
+.animate-up {
+  bottom: 175px;
+}
+
+.animate-down {
+  bottom: 5px;
+}
+
+.rotate {
+  animation: rotate 1.25s ease-out;
+}
+
+.ground-container {
+  height: 40px;
+  position: relative;
+}
+
+.ground-container::after {
+  content: '';
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: rgb(255, 0, 0);
+  transform: translateX(-50%);
+}
+
+.ground {
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  transition: transform 2.5s ease-out;
+}
+
+.meter {
+  width: 50px;
+  height: 25px;
+  border-right: 1px solid rgb(0, 0, 0);
+  padding: 5px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+#data {
+  margin-top: 10px;
+  text-align: center;
+  top: 0px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+}
+
+#data p {
+  margin: 5px;
+}
+
+#nameInput {
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#distance {
+  font-weight: bold;
+}
+
+#married {
+  width: 100px;
+  margin-bottom: 25px;
+  border-left: 2px solid rgb(0, 0, 0);
+  border-right: 2px solid rgb(0, 0, 0);
+  border-top: none;
+  border-bottom: none;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(1080deg);
+  }
+}
+
+@font-face {
+  font-family: 'wedding01font';
+  src: url('/assets/wedding01.ttf') format('truetype');
+}

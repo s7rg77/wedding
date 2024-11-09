@@ -1,0 +1,85 @@
+<header class="header">
+    <img #elenasergio id="elenasergio" src="/assets/elenasergio.jpg" alt="elenasergio">
+    <img #png02 class="png02" src="/assets/02trans.png" alt="02trans"
+        [ngStyle]="{'transform': 'translateY(' + png02Translate + 'px)'}" />
+    <img #png03 class="png03" src="/assets/03trans.png" alt="03trans"
+        [ngStyle]="{'transform': 'translateY(' + png03Translate + 'px)'}" />
+    <img class="names" src="/assets/elenaysergio.svg" alt="elena y sergio" />
+    <img #png04 class="png04" src="/assets/04trans.png" alt="04trans"
+        [ngStyle]="{'transform': 'translateY(' + png04Translate + 'px)'}" />
+    <img #png05 class="png05" src="/assets/05trans.png" alt="05trans"
+        [ngStyle]="{'transform': 'translateY(' + png05Translate + 'px)'}" />
+    <img #png06 class="png06" src="/assets/06trans.png" alt="06trans"
+        [ngStyle]="{'transform': 'translateY(' + png06Translate + 'px)'}" />
+    <img #png07 class="png07" src="/assets/07trans.png" alt="07trans"
+        [ngStyle]="{'transform': 'translateY(' + png07Translate + 'px)'}" />
+    <img #png08 class="png08" src="/assets/08trans.png" alt="08trans"
+        [ngStyle]="{'transform': 'translateY(' + png08Translate + 'px)'}" />
+    <img #png09 class="png09" src="/assets/09trans.png" alt="09trans"
+        [ngStyle]="{'transform': 'translateY(' + png09Translate + 'px)'}" />
+</header>
+<main class="main">
+    <p class="p">¡Escucha la música!</p>
+    <app-audioplayer></app-audioplayer>
+    <h2>Fecha</h2>
+    <div id="calendar">
+        <img class="calendarpng" src="/assets/calendar.png" alt="calendar">
+        <button (click)="addToGoogleCalendar()">Recordatorio</button>
+        <img id="google" src="/assets/google.svg" alt="google" />
+    </div>
+    <h2>Cuánto falta para el gran día</h2>
+    <div id="chrono">
+        <div class="time">{{ days }} días</div>
+        <div class="time">{{ hours }} horas</div>
+        <div class="time">{{ minutes }} minutos</div>
+        <div class="time">{{ seconds }} segundos</div>
+        <img id="clock" src="/assets/loader2.svg" alt="loader2" />
+    </div>
+    <h2>Ceremonia y celebración</h2>
+    <div id="place">
+        <p id="castle">Castillo Bonavia</p>
+        <p id="location">A-68, Km 250,95<br>
+            Pedrola Zaragoza</p>
+    </div>
+    <div class="map">
+        <app-map></app-map>
+    </div>
+    <h2>Itinerario</h2>
+    <app-itinerary></app-itinerary>
+    <h2>Servicios</h2>
+    <app-services></app-services>
+    <h2>Formulario de Confirmación</h2>
+    <p class="p">Regístrate y accede al formulario de confirmación de asistencia, un correo electrónico por familia.</p>
+    <app-form></app-form>
+    <h2>Nuestro álbum</h2>
+    <app-book></app-book>
+    <h2>Álbum de boda</h2>
+    <p class="p">¡Vacío por ahora!</p>
+    <h2>Libro de firmas virtual</h2>
+    <div id="notes-container">
+        <p class="p">Escribe lo que quieras.</p>
+        <button [routerLink]="['/notes']">Abrir libro</button>
+    </div>
+    <h2>Lanza el ramo</h2>
+    <div id="game-container">
+        <p class="p">Ayuda a Elena a lanzar el ramo y si el día de la boda eres la persona que más lejos lo ha lanzado,
+            ¡Te daremos una sorpresa!</p>
+        <button [routerLink]="['/game']">Abrir Juego</button>
+    </div>
+    <h2>Regalo de bodas</h2>
+    <p class="p">Tu presencia es el mejor regalo, pero si prefieres algo que no ocupe espacio, puedes dejar tu huella aquí:</p>
+    <img src="/assets/bizum.svg" alt="bizum" />
+    <p id="phone">615411670</p>
+    <img src="/assets/caixa.svg" alt="caixa" />
+    <p id="bank">XXXX XXXX XXXX XXXX XXXX</p>
+    <div id="waterfall">
+        <p id="date">28 junio 2025</p>
+        <img id="elena" src="/assets/elena.jpg" alt="elena">
+    </div>
+</main>
+<footer class="footer">
+    <div id="s7rg77">
+        developed by <a href="http://s7rg77.com" target="_blank">s7rg77.com</a>
+    </div>
+</footer>
+<app-leaves></app-leaves>

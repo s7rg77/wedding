@@ -1,0 +1,98 @@
+h2 {
+  width: 100%;
+  padding-top: 25px;
+  margin-top: 0px;
+  background: linear-gradient(to top right, rgba(125, 75, 175, 0.5), rgba(125, 75, 175, 0));
+  font-family: 'wedding01font';
+  font-size: 60px;
+  font-weight: 100;
+  text-align: center;
+}
+
+#load {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+}
+
+#notes-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#notes {
+  width: 90%;
+  max-width: 500px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.note {
+  padding: 5px;
+  background: linear-gradient(to top right, rgba(175, 175, 255, 0.5), rgba(255, 255, 255, 0));
+  border-radius: 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bold;
+}
+
+.image {
+  width: 75px;
+  height: 75px;
+  float: left;
+}
+
+pre {
+  white-space: pre-wrap;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+textarea {
+  width: 90%;
+  height: 100px;
+  margin-bottom: 25px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+button {
+  width: 50%;
+  max-width: 500px;
+  margin-bottom: 25px;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 175, 0, 0.25);
+  font-size: 16px;
+  cursor: pointer;
+  transition: border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+button:hover {
+  border: 1px solid rgb(0, 0, 255);
+}
+
+@font-face {
+  font-family: 'wedding01font';
+  src: url('/assets/wedding01.ttf') format('truetype');
+}

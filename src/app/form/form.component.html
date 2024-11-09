@@ -1,12 +1,14 @@
+<div id="load" *ngIf="loggedIn && isLoading">Cargando DATOS...</div>
+
 <ng-container *ngIf="!loggedIn">
-  <form class="autform" [formGroup]="signupForm" (ngSubmit)="signup()">
+  <form id="signup" class="autform" [formGroup]="signupForm" (ngSubmit)="signup()">
     <label class="autlabel" for="signupEmail">Correo electrónico</label>
     <input class="autinput" id="signupEmail" formControlName="user_mail" type="email" />
     <label class="autlabel" for="signupPassword">Contraseña</label>
     <input class="autinput" id="signupPassword" formControlName="user_pass" type="password" />
     <button class="autbutton" type="submit">Registrarse</button>
   </form>
-  <form class="autform" [formGroup]="signinForm" (ngSubmit)="signin()">
+  <form id="signin" class="autform" [formGroup]="signinForm" (ngSubmit)="signin()">
     <label class="autlabel" for="signinEmail">Correo electrónico</label>
     <input class="autinput" id="signinEmail" formControlName="user_mail" type="email" />
     <label class="autlabel" for="signinPassword">Contraseña</label>
@@ -14,7 +16,8 @@
     <button class="autbutton" type="submit">Iniciar sesión</button>
   </form>
 </ng-container>
-<ng-container *ngIf="loggedIn">
+
+<ng-container *ngIf="loggedIn && !isLoading">
   <ng-container *ngIf="!viewingData">
     <form class="editform" [formGroup]="mainForm" (ngSubmit)="confirm()">
       <div class="edit" formArrayName="users">
@@ -108,7 +111,6 @@
           {{ user.user_age ? 'Adulto' : 'Niño' }}<br>
           Autobús: {{ user.user_bus ? 'Sí' : 'No' }}<br>
           Alergias: {{ user.user_data }}
-
         </div>
       </ng-container>
     </div>

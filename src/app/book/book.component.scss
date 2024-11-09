@@ -6,13 +6,22 @@
 
 .book {
     width: 90%;
-    max-width: 450px;
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
     aspect-ratio: 1.5 / 1;
     perspective: 750px;
     user-select: none;
+}
+
+#hola {
+    width: 50%;
+    padding-right: 10px;
+    top: 50%;
+    left: 0px;
+    position: absolute;
+    transform: translateY(-50%);
 }
 
 .page {
@@ -32,6 +41,7 @@
     transform-style: preserve-3d;
     transform-origin: left center;
     z-index: 4;
+    cursor: pointer;
 
     &:nth-of-type(2n-1) {
         padding: 10px 10px 10px 0px;
@@ -64,19 +74,16 @@
         pointer-events: none;
     }
 
-    h2 {
-        text-align: center;
-    }
-
 }
 
 input[type=radio] {
+
     display: none;
 }
 
 input:checked {
     &~.page {
-        transform: rotateY(1deg);
+        transform: rotateY(-1deg);
     }
 
     &~.page:nth-of-type(2n) {
@@ -101,17 +108,19 @@ input:checked {
     height: 100%;
     top: 0;
     border-radius: 0 5px 5px 0;
-    background-color: rgb(75, 125, 75);
+    background-color: rgb(150, 150, 200);
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5), -5px 5px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 
 
     h1 {
+        margin-top: 25px;
         text-align: center;
         font-family: 'wedding01font';
-        font-size: 75px;
+        font-size: 50px;
         font-weight: 100;
         color: rgb(255, 255, 255);
-        line-height: 50px;
+        line-height: 35px;
     }
 
     &+.cover {

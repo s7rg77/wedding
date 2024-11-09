@@ -14,6 +14,8 @@ import { MainService } from '../main.service';
 
 export class FormComponent implements OnInit {
 
+  isLoading: boolean = true;
+
   auth: Auth;
   signupForm: FormGroup;
   signinForm: FormGroup;
@@ -87,11 +89,12 @@ export class FormComponent implements OnInit {
 
   loadUserData() {
 
+    this.isLoading = true;
+
     if (this.user_mail) {
 
       this.mainService.getService(this.user_mail).subscribe({
         next: response => {
-          console.log('Datos del usuario:', response);
 
           if (this.user_mail === 'sxrgxx@gmail.com') {
 
@@ -124,10 +127,12 @@ export class FormComponent implements OnInit {
 
           }
 
+          this.isLoading = false;
+
         },
-        error: error => {
-          console.error('Error al cargar los datos del usuario:', error);
+        error: () => {
         }
+
       });
 
     }
